@@ -13,8 +13,8 @@ int main() {
 	int dy[] = { 0, 0, 1, -1 };
 
 	cin >> n >> m;
-	bool possible = false; // for¹® ´Ù µ¹°í false¸é Åä¸¶Åä´Â ´Ù ÀÍÀ» ¼ö ¾ø´Ù
-	bool every_tomato = true; // for¹® ´Ù µ¹°í true¸é ¸ğµÎ ´Ù ÀÍÀº Åä¸¶Åä
+	bool possible = false; // forë¬¸ ë‹¤ ëŒê³  falseë©´ í† ë§ˆí† ëŠ” ë‹¤ ìµì„ ìˆ˜ ì—†ë‹¤
+	bool every_tomato = true; // forë¬¸ ë‹¤ ëŒê³  trueë©´ ëª¨ë‘ ë‹¤ ìµì€ í† ë§ˆí† 
 	
 	queue<pair<int, int>> q;
 
