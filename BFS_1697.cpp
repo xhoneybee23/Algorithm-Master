@@ -17,7 +17,7 @@ int main() {
 
 	queue <int> q;
 	q.push(s);
-	dist[s] = 1;
+	dist[s] = 0;
 	check[s] = true;
 
 	while (!q.empty()){
@@ -47,6 +47,6 @@ int main() {
 
 	}
 
-	cout << dist[d] - 1 << endl;
+	cout << dist[d] << endl;
 	return 0;
 }
