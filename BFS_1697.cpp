@@ -2,6 +2,12 @@
 #include <queue>
 using namespace std;
 
+
+// 유의사항 : 현재의 값에서 연산을 해보고 원하는 destination값이면 dist[현재]+1 로 출력하면 최저값이 안나옴
+// 큐에 넣으면서 destination 값과 비교하면 안됨
+// 그 이유는 현재의 값과 동일한 depth에 있는 후보 중에 원하는 destination 값이 있을 수 있음
+// 그럼 답은 dist[현재]가 되는 것임
+
 int main() {
 	int s, d;
 	int dist[100001] = { 0 };
