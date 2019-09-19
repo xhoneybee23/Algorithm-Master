@@ -21,7 +21,6 @@ int main() {
 
 	queue<pair<int, int>> q;
 
-	// ù ĭ �湮
 	check[0][0] = true;
 	q.push(make_pair(0, 0));
 	dist[0][0] = 1;
