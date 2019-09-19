@@ -2,6 +2,8 @@
 #include <deque>
 using namespace std;
 
+//deque를 활용하여 가중치가 서로 다른 BFS 문제 해결
+
 int main(){
 	int s, d;
 	bool check[100001] = { false };
@@ -42,6 +44,5 @@ int main(){
 		}
 
 	}
-	//cout << dist[d] << endl;
 	return 0;
 }
