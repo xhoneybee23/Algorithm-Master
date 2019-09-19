@@ -11,7 +11,7 @@ int main() {
 
 	queue <int> q;
 	q.push(s);
-	dist[s] = 1;
+	dist[s] = 0;
 	check[s] = true;
 
 	while (!q.empty()){
@@ -19,8 +19,10 @@ int main() {
 
 		q.pop();
 
+		// 여기서 x값을 destination과 비교해서 바로 dist값을 출력하면 시간복잡도를 줄일 수 있다.
+		// 굳이 모든 값에 대한 dist값을 계산하지 않고 원하는 값의 dist 값을 찾으면 끝내기 때문에
 		if (x == d) {
-			cout << dist[x] - 1 << endl;
+			cout << dist[x] << endl;
 			break;
 		}
 		int s_1 = x + 1;
