@@ -2,6 +2,8 @@
 #include <deque>
 using namespace std;
 
+//dequeë¡œ ê°€ì¤‘ì¹˜ê°€ ë‹¤ë¥¸ BFS ë¬¸ì œ í•´ê²°
+
 int main() {
 	int n, m;
 	int map[100][100];
@@ -10,7 +12,7 @@ int main() {
 	int dx[] = { 1, -1, 0, 0 };
 	int dy[] = { 0, 0, 1, -1 };
 
-	cin >> n >> m;  //nÀÌ ¿­, mÀÌ Çà
+	cin >> n >> m;  //nì´ ì—´, mì´ í–‰
 	for (int i = 0; i < m; i++){
 		for (int j = 0; j < n; j++){
 			scanf("%1d", &map[i][j]);
@@ -33,13 +35,13 @@ int main() {
 			int ny = y + dy[k];
 
 			if (check[nx][ny] == false && nx >= 0 && nx<m && ny >= 0 && ny<n){
-				//ºó Ä­ÀÎ °æ¿ì
+				//ë¹ˆ ì¹¸ì¸ ê²½ìš°
 				if (map[nx][ny] == 0){
 					q.push_front(make_pair(nx, ny));
 					check[nx][ny] = true;
 					dist[nx][ny] = dist[x][y];
 				}
-				//º®ÀÎ °æ¿ì
+				//ë²½ì¸ ê²½ìš°
 				else{
 					q.push_back(make_pair(nx, ny));
 					check[nx][ny] = true;
