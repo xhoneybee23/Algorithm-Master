@@ -4,6 +4,9 @@
 #include <cstring>
 using namespace std;
 
+
+// unsolved 
+
 int m, n;
 int map[1001][1001];
 bool check[1001][1001][2];
@@ -46,23 +49,23 @@ int main() {
 			int ny = y + dy[k];
 
 			if (nx >= 0 && nx < m && ny >= 0 && ny < n){
-				if (check[nx][ny][0] == false && check[nx][ny][1] == false){ //z==0 ÀÎ °æ¿ì¿Í 1ÀÎ °æ¿ì ¸ðµÎ ºñ±³ÇØºÁ¾ßÇÏ³ª?
-					if (z == 0 && map[nx][ny] == 0) {// º®À» ºÎ¼øÀûÀÌ ¾ø°í, ºó ¹æÀÏ ¶§
+				if (check[nx][ny][0] == false && check[nx][ny][1] == false){ //z==0 ì¸ ê²½ìš°ì™€ 1ì¸ ê²½ìš° ëª¨ë‘ ë¹„êµí•´ë´ì•¼í•˜ë‚˜?
+					if (z == 0 && map[nx][ny] == 0) {// ë²½ì„ ë¶€ìˆœì ì´ ì—†ê³ , ë¹ˆ ë°©ì¼ ë•Œ
 						check[nx][ny][z] = true;
 						q.push(make_tuple(nx, ny, z));
 						dist[nx][ny][z] = dist[x][y][z] + 1;
 					}
-					else if (z == 0 && map[nx][ny] == 1) { // º®À» ºÎ¼ø ÀûÀÌ ¾ø°í, º®ÀÏ ¶§
+					else if (z == 0 && map[nx][ny] == 1) { // ë²½ì„ ë¶€ìˆœ ì ì´ ì—†ê³ , ë²½ì¼ ë•Œ
 						check[nx][ny][z + 1] = true;
 						q.push(make_tuple(nx, ny, z + 1));
 						dist[nx][ny][z + 1] = dist[x][y][z] + 1;
 					}
-					else if (z == 1 && map[nx][ny] == 0) { // º®À» ºÎ¼ø ÀûÀÌ ÀÖ°í, ºó ¹æÀÏ ¶§
+					else if (z == 1 && map[nx][ny] == 0) { // ë²½ì„ ë¶€ìˆœ ì ì´ ìžˆê³ , ë¹ˆ ë°©ì¼ ë•Œ
 						check[nx][ny][z] = true;
 						q.push(make_tuple(nx, ny, z));
 						dist[nx][ny][z] = dist[x][y][z] + 1;
 					}
-					else continue; // º®À» ºÎ¼ø ÀûÀÌ ÀÖ°í, º®ÀÏ ¶§´Â ³Ñ¾î°£´Ù
+					else continue; // ë²½ì„ ë¶€ìˆœ ì ì´ ìžˆê³ , ë²½ì¼ ë•ŒëŠ” ë„˜ì–´ê°„ë‹¤
 				}
 			}
 		}
