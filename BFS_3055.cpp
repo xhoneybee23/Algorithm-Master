@@ -3,6 +3,9 @@
 #include <queue>
 using namespace std;
 
+// unsolved
+// ì½”ë“œê°€ ì§€ì €ë¶„í•´ì„œ ì •ë¦¬í•´ì•¼í•¨
+
 char map[50][50];
 bool check[50][50];
 bool check2[50][50];
@@ -43,7 +46,7 @@ int main() {
 		if (i != m - 1) scanf("\n", &junk);
 	}
 
-	// ¹°ÀÌ Ã¤¿öÁö´Â BFS ¸¸µé±â
+	// ë¬¼ì´ ì±„ì›Œì§€ëŠ” BFS ë§Œë“¤ê¸°
 	queue <pair<int, int>> wq;
 
 	wq.push(make_pair(wx, wy));
@@ -73,7 +76,7 @@ int main() {
 		}
 	}
 
-	//Source¿¡¼­ Destination±îÁö ¹°°ú µ¹À» ÇÇÇØ°¡ÀÚ
+	//Sourceì—ì„œ Destinationê¹Œì§€ ë¬¼ê³¼ ëŒì„ í”¼í•´ê°€ì
 	queue<pair<int, int>> q;
 	q.push(make_pair(sx, sy));
 	check2[sx][sy] = true;
