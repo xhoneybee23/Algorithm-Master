@@ -2,6 +2,8 @@
 #include <cstring>
 using namespace std;
 
+// Top-down
+
 int d[1000000];
 
 int go(int n){
