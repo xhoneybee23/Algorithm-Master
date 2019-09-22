@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// 시간복잡도 O(N^2)
+
 int price[1001];
 int d[1001];
 
@@ -18,9 +20,10 @@ int go(int n){
 
 int main() {
 	int n;
-	scanf_s("%d\n", &n);
+	scanf("%d\n", &n);
 	for (int i = 1; i <= n; i++){
-		scanf_s("%d", &price[i]);
+		// scanf("%d ", ~) 로 선언하면 숫자를 하나 더 받음
+		scanf("%d", &price[i]);
 	}
 	d[0] = 0;
 	d[1] = price[1];
