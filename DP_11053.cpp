@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+// bottom-up
+// LIS(Longest Increasing Subsequence) Problem 
+
 int a[1001];
 int t[1001];
 
