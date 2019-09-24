@@ -22,7 +22,7 @@ int main() {
 	cin >> n;
 
 	for (int i = 1; i <= n; i++){
-		scanf_s("%d", &a[i]);
+		scanf("%d", &a[i]);
 	}
 
 	for (int j = 1; j <= n; j++){
