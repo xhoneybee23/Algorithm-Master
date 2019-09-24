@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// bottom-up
+
 int g[10001];
 int t[10001][3];
 
