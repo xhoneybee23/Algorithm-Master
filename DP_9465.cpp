@@ -1,5 +1,8 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
+
+// bottom-up
 
 int point[3][100001];
 int d[100001][4];
@@ -20,16 +23,16 @@ int main() {
 		cin >> n;
 		for (int i = 1; i <= 2; i++){
 			for (int j = 1; j <= n; j++){
-				scanf_s("%d", &point[i][j]);
+				scanf("%d", &point[i][j]);
 			}
 		}
 
 		d[0][1] = 0; d[0][2] = 0; d[0][3] = 0;
 		
 		for (int k = 1; k <= n; k++){
-			d[k][1] = max(d[k - 1][1], d[k - 1][2], d[k - 1][3]); // ¾Æ¹«°Íµµ ¼±ÅÃ ¾ÈÇÔ
-			d[k][2] = max(d[k - 1][1], d[k - 1][3], -1)+point[1][k]; // À§ÂÊ ½ºÆ¼Ä¿ ¼±ÅÃ
-			d[k][3] = max(d[k - 1][1], d[k - 1][2], -1)+point[2][k]; // ¾Æ·¡ÂÊ ½ºÆ¼Ä¿ ¼±ÅÃ
+			d[k][1] = max(d[k - 1][1], d[k - 1][2], d[k - 1][3]); // ì•„ë¬´ê²ƒë„ ì„ íƒ ì•ˆí•¨
+			d[k][2] = max(d[k - 1][1], d[k - 1][3], -1)+point[1][k]; // ìœ„ìª½ ìŠ¤í‹°ì»¤ ì„ íƒ
+			d[k][3] = max(d[k - 1][1], d[k - 1][2], -1)+point[2][k]; // ì•„ëž˜ìª½ ìŠ¤í‹°ì»¤ ì„ íƒ
 
 		}
 
