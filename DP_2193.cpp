@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// bottom-up
+
 long long d[91][2];
 
 int main() {
