@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+// bottom-up 
+// 결과값이 큰 경우는 bottom up이 안전한 것 같다
+// 왜 틀렸는지 모르겠음 ㅜ
+
 long long mod = 1000000000LL;
 int MAX = 100;
 long long d[101][10];
