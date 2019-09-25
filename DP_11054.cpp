@@ -2,25 +2,26 @@
 using namespace std;
 
 // bottom-up
-// LIS(Longest Increasing Subsequence) Problem 
+// LIS(Longest Increasing Subsequence) Problem Extended
+// ê°€ìž¥ ê¸´ ë°”ì´í† ë‹‰ ë¶€ë¶„ ìˆ˜ì—´
 
 int d[1001];
-int b[1001]; // before the value Áõ°¡ ¼ö¿­
-int a[1001]; // after the value °¨¼Ò ¼ö¿­
+int b[1001]; // before the value ì¦ê°€ ìˆ˜ì—´
+int a[1001]; // after the value ê°ì†Œ ìˆ˜ì—´
 
 int main(){
 	int n;
 	cin >> n;
 
-	// ÀÔ·Â°ª
+	// ìž…ë ¥ê°’
 	for (int i = 1; i <= n; i++){
-		scanf_s("%d", &d[i]);
+		scanf("%d", &d[i]);
 	}
 
-	b[0] = 0;
+	b[0] = 0; a[0] = 0;
 
-	// Áõ°¡ ¼ö¿­ Ã£±â 
-	// b Ã¤¿ì±â
+	// ì¦ê°€ ìˆ˜ì—´ ì°¾ê¸° 
+	// b ì±„ìš°ê¸°
 	for (int j = 1; j <= n; j++){
 		b[j] = 1;
 		for (int k = j - 1; k >= 1; k--){
@@ -28,9 +29,9 @@ int main(){
 		}
 	}
 
-	// °¨¼Ò ¼ö¿­ Ã£±â
-	// a Ã¤¿ì±â
-	// ¸¶Áö¸· value ºÎÅÍ ±× µÚ¸¦ º¸¸ç °¨¼ÒÇÏ´Â °ª Ã£°í³ª¼­ ¾ÕÀÇ value·Î ³Ñ¾î°¨
+	// ê°ì†Œ ìˆ˜ì—´ ì°¾ê¸°
+	// a ì±„ìš°ê¸°
+	// ë§ˆì§€ë§‰ value ë¶€í„° ê·¸ ë’¤ë¥¼ ë³´ë©° ê°ì†Œí•˜ëŠ” ê°’ ì°¾ê³ ë‚˜ì„œ ì•žì˜ valueë¡œ ë„˜ì–´ê°
 	for (int j = n; j >= 1; j--){
 		a[j] = 1;
 		for (int k = j + 1; k <= n; k++){
