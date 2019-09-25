@@ -2,7 +2,8 @@
 using namespace std;
 
 // bottom-up
-// LIS(Longest Increasing Subsequence) Problem 
+// LIS(Longest Increasing Subsequence) Problem Extended -> Decreasing
+// 가장 긴 감소 부분 수열
 
 int a[1001];
 int t[1001];
@@ -11,7 +12,7 @@ int main(){
 	int n;
 	cin >> n;
 	for (int i = 1; i <= n; i++){
-		scanf_s("%d", &a[n-i+1]);
+		scanf("%d", &a[n-i+1]);
 	}
 
 	t[0] = 0;
