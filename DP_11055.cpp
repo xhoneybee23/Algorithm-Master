@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+// LIS(Longest Increasing Subsequence) Problem Extended
+// 합이 가장 큰 증가 수열
+
 int a[1001];
 int s[1001];
 
