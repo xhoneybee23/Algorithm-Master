@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+// 연속합 문제 - 중요함
+// n번째 자리에서 이전까지의 연속합을 n번째 value와 더하는게 이득인가 손실인가를 따지면 됨
+
 int a[100001];
 int d[100001];
 
@@ -9,7 +12,7 @@ int main() {
 	cin >> n;
 
 	for (int i = 1; i <= n; i++){
-		scanf_s("%d", &a[i]);
+		scanf("%d", &a[i]);
 	}
 	
 	d[0] = 0;
