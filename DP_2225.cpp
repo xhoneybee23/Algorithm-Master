@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// 합분해
+
 long long d[201][201];
 const int mod = 1000000000LL;
 
