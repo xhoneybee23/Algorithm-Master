@@ -4,7 +4,7 @@ using namespace std;
 // 합분해
 
 long long d[201][201];
-const int mod = 1000000000LL;
+const long long mod = 1000000000LL;
 
 int go(int k, int n){
 	if (k == 1) return 1;
