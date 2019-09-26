@@ -1,5 +1,9 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
+
+// Top-down
+// 제곱수의 합
 
 int d[100001];
 
